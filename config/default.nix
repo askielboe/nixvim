@@ -1,6 +1,5 @@
-{
-  lib,
-  ...
+{ lib
+, ...
 }:
 let
   inherit (builtins) readDir;
@@ -10,11 +9,14 @@ let
 in
 {
   imports =
-    (foldlAttrs (
-      prev: name: type:
-      prev ++ optional (type == "directory") (by-name + "/${name}")
-    ) [ ] (readDir by-name))
+    (foldlAttrs
+      (
+        prev: name: type:
+          prev ++ optional (type == "directory") (by-name + "/${name}")
+      ) [ ]
+      (readDir by-name))
     ++ [
       ./keys.nix
+      ./sets.nix
     ];
 }
