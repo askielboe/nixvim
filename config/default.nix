@@ -1,6 +1,4 @@
-{ lib
-, ...
-}:
+{ lib, ... }:
 let
   inherit (builtins) readDir;
   inherit (lib.attrsets) foldlAttrs;
@@ -16,6 +14,7 @@ in
       ) [ ]
       (readDir by-name))
     ++ [
+      ./autocmd.nix
       ./keys.nix
       ./sets.nix
     ];
