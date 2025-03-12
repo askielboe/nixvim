@@ -4,6 +4,12 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nixvim.url = "github:nix-community/nixvim";
+
+    # Plugins built from source
+    snacks-nvim = {
+      url = "github:folke/snacks.nvim";
+      flake = false;
+    };
   };
 
   outputs =
