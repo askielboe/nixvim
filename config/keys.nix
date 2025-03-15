@@ -14,6 +14,48 @@
         };
       }
 
+      # Split navigation
+      {
+        mode = "n";
+        key = "<C-h>";
+        action = "<C-w>h";
+        options = {
+          noremap = true;
+          silent = true;
+          desc = "Move to left split";
+        };
+      }
+      {
+        mode = "n";
+        key = "<C-j>";
+        action = "<C-w>j";
+        options = {
+          noremap = true;
+          silent = true;
+          desc = "Move to below split";
+        };
+      }
+      {
+        mode = "n";
+        key = "<C-k>";
+        action = "<C-w>k";
+        options = {
+          noremap = true;
+          silent = true;
+          desc = "Move to above split";
+        };
+      }
+      {
+        mode = "n";
+        key = "<C-l>";
+        action = "<C-w>l";
+        options = {
+          noremap = true;
+          silent = true;
+          desc = "Move to right split";
+        };
+      }
+
       # Clear and replace word under cursor
       {
         mode = "n";
