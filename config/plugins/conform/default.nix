@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  extraPackages = with pkgs; [ shfmt ];
+  extraPackages = with pkgs; [ shfmt prettierd ];
   plugins.conform-nvim = {
     enable = true;
 
@@ -22,14 +22,21 @@
         python = [ "black" ];
         lua = [ "stylua" ];
         nix = [ "nixfmt" ];
-        markdown = [ "prettier" ];
+        markdown = [ "prettierd" ];
         yaml = [ "yamlfmt" ];
-        terragrunt = [
-          "hcl"
-        ];
-        bash = [
-          "shfmt"
-        ];
+        terragrunt = [ "hcl" ];
+        bash = [ "shfmt" ];
+        javascript = [ "prettierd" ];
+        javascriptreact = [ "prettierd" ];
+        typescript = [ "prettierd" ];
+        typescriptreact = [ "prettierd" ];
+        vue = [ "prettierd" ];
+        css = [ "prettierd" ];
+        scss = [ "prettierd" ];
+        html = [ "prettierd" ];
+        less = [ "prettierd" ];
+        jsonc = [ "prettierd" ];
+        json = [ "fixjson" "prettierd" ];
       };
     };
   };
