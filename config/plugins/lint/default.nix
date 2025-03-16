@@ -23,7 +23,6 @@
           "statix"
         ];
         sh = [ "shellcheck" ];
-        terraform = [ "tflint" ];
         yaml = [ "yamllint" ];
       };
 
@@ -60,9 +59,6 @@
         };
         statix = {
           cmd = lib.getExe pkgs.statix;
-        };
-        terraform = {
-          cmd = lib.getExe pkgs.tflint;
         };
         yamllint = {
           cmd = lib.getExe pkgs.yamllint;
