@@ -7,9 +7,21 @@
       enable = true;
       inlayHints = true;
       servers = {
+        bashls.enable = true;
+        docker_compose_language_service.enable = true;
+        dockerls.enable = true;
+        erlangls.enable = true;
         eslint.enable = true;
-        ruff.enable = true;
+        lua_ls.enable = true;
+        nginx_language_server.enable = true;
+        postgres_lsp.enable = true;
+        pyright.enable = true;
+        ruby_lsp.enable = true;
+        ruff_lsp.enable = true;
+        shopify_theme_ls.enable = true;
+        tflint.enable = true;
         ts_ls.enable = true;
+        yamlls.enable = true;
       };
       keymaps = {
         silent = true;
