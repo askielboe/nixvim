@@ -118,7 +118,7 @@
       {
         mode = "n";
         key = "<C-y>";
-        action = ":t.<CR>";
+        action = "<CMD>t.<CR>";
         options = {
           noremap = true;
           silent = true;
@@ -130,7 +130,7 @@
       {
         mode = "n";
         key = "<leader>qq";
-        action = ":wqa<CR>";
+        action = "<CMD>wqa<CR>";
         options = {
           noremap = true;
           silent = true;
